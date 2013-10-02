@@ -149,6 +149,11 @@ class Array
   end
 end
 
+if defined?(ActiveSupport::TestCase)
+  class ActiveSupport::TestCase
+    self.use_transactional_fixtures = false
+  end
+end
 
 # Source: http://gist.github.com/25455
 def context(*args, &block)
