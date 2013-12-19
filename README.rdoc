@@ -44,6 +44,7 @@ add to your application controller:
 
   class ApplicationController < ActionController::Base
     use_vanity :current_user
+    layout false  # exclude this if you want to use your application layout
   end
 
 === <b>Step 2:</b> Define your first A/B test
